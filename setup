@@ -1,0 +1,52 @@
+#!binbash
+
+createSymlink() {
+    if [ "$2" ]; then
+        rm "$2"
+    fi
+    ln -s "$1" "$2"
+    echo "Created symlink to $1"
+}
+
+createCodeSymlink() {
+    createSymlink `pwd`$1 ~LibraryApplication\ SupportCodeUser$1
+}
+
+installExtension() {
+    code --install-extension $1
+}
+
+uninstallExtension() {
+    code --uninstall-extension $1
+}
+
+createCodeSymlink settings.json
+createCodeSymlink keybindings.json
+
+installExtension DavidAnson.vscode-markdownlint-0.10.1
+installExtension Gimly81.matlab-0.6.0
+installExtension JuanBlanco.solidity-0.0.29
+installExtension PeterJausovec.vscode-docker-0.0.16
+installExtension RobinMalfait.prettier-eslint-vscode-0.7.1
+installExtension Tyriar.sort-lines-1.3.0
+installExtension christian-kohler.npm-intellisense-1.3.0
+installExtension christian-kohler.path-intellisense-1.4.2
+installExtension dbaeumer.vscode-eslint-1.2.11
+installExtension dkundel.vscode-npm-source-1.0.0
+installExtension donjayamanne.githistory-0.2.3
+installExtension donjayamanne.python-0.7.0
+installExtension eg2.tslint-0.17.0
+installExtension eg2.vscode-npm-script-0.2.1
+installExtension emilast.LogFileHighlighter-1.1.1
+installExtension fknop.vscode-npm-3.3.0
+installExtension flowtype.flow-for-vscode-0.7.1
+installExtension lukehoban.go-0.6.63
+installExtension lukehoban.go-0.6.64
+installExtension lukehoban.go-0.6.65
+installExtension mkxml.vscode-filesize-1.0.0
+installExtension naumovs.color-highlight-2.3.0
+installExtension pthorsson.vscode-jsp-0.0.2
+installExtension redhat.java-0.9.0
+installExtension waderyan.gitblame-2.1.0
+installExtension wix.vscode-import-cost-2.5.0
+installExtension yzane.markdown-pdf-0.1.7
