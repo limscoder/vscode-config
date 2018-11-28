@@ -1,3 +1,4 @@
+// Place your key bindings in this file to overwrite the defaults
 [
   {
     "key": "cmd+backspace",
@@ -78,16 +79,6 @@
     "command": "-workbench.action.focusRightEditor"
   },
   {
-    "key": "cmd+[",
-    "command": "workbench.action.navigateBack",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "cmd+]",
-    "command": "workbench.action.navigateForward",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "cmd+e",
     "command": "workbench.action.quickOpen"
   },
@@ -100,11 +91,27 @@
     "command": "workbench.action.showCommands"
   },
   {
-    "key": "cmd+shift+]",
-    "command": "workbench.action.terminal.focusRight"
+    "key": "alt+]",
+    "command": "workbench.action.terminal.focusNext"
   },
   {
-    "key": "cmd+shift+[",
-    "command": "workbench.action.terminal.focusLeft"
+    "key": "alt+[",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.terminal.focusNextPane"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.terminal.focusPreviousPane"
+  },
+  {
+    "key": "cmd+d",
+    "command": "workbench.action.terminal.split"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.terminal.kill"
   }
 ]
